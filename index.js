@@ -149,7 +149,7 @@ process.on("uncaughtException", async (error) => {
 });
 
 // Log in to Discord with your app's token
-client.login(process.env.BOT_TOKEN).catch(async (error) => {
+client.login(process.env.TOKEN).catch(async (error) => {
   if (error.message.includes("An invalid token was provided")) {
     console.log(error);
     await logError("INVALID_TOKEN", error);
